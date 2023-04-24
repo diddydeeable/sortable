@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="table">
+        <section class="table__header">
+            <h1>SuperHero Search</h1>
+            <div class="input-group">
+                <input type="text" id="filter" placeholder="Search Data...">
+            </div>
+            <div class="paging">
+                <label for="filter-select">Show:</label>
+                <select id="limit-selector">
+                  <option value="10">10</option>
+                  <option value="20" selected>20</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="All">All</option>
+                </select>
+            </div>
+        </section>
+        <section class="table__body">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Icon</th>
+                        <th data-sort-col="0" onclick="sortTable(0)">Name</th>
+                        <th data-sort-col="1" onclick="sortTable(2)">Full Name</th>
+
+                            <!-- start powerstats table -->
+                              <th data-sort-col="2" onclick="sortTable(2)">Intelligence</th>
+                              <th data-sort-col="3" onclick="sortTable(3)">Strength</th>
+                              <th data-sort-col="4" onclick="sortTable(4)">Speed</th>
+                              <th data-sort-col="5" onclick="sortTable(5)">Durability</th>
+                              <th data-sort-col="6" onclick="sortTable(6)">Power</th>
+                              <th data-sort-col="7" onclick="sortTable(7)">Combat</th>
+                        <!-- end of powerstats table -->
+                        <th data-sort-col="8" onclick="sortTable(8)">Race</th>
+                        <th data-sort-col="9" onclick="sortTable(9)">Gender</th>
+                        <th data-sort-col="10" onclick="sortTable(10)">Height</th>
+                        <th data-sort-col="11" onclick="sortTable(11)">Weight</th>
+                        <th data-sort-col="12" onclick="sortTable(12)">Place Of Birth</th>
+                        <th data-sort-col="13" onclick="sortTable(13)">Alignment</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"> </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="index.js" defer></script>
+</body>
+
+</html>
